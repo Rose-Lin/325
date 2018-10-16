@@ -2,7 +2,6 @@ import nltk
 from tabulate import tabulate
 
 def minimum_edit_distance(source, target):
-    # print('{}|{}|'.format(source, target))
     n = len(source)+1
     m = len(target)+1
     matrix = [[0 for x in range(m)] for y in range(n)]
@@ -20,7 +19,6 @@ def minimum_edit_distance(source, target):
     return matrix[n-1][m-1]
 
 def calculate_WER(distance, correct_length):
-    # print(distance, correct_length)
     return distance/correct_length
 
 def seperate_hashtags(hashtag_list, word_list, rows, correct_answers):
@@ -64,8 +62,8 @@ with open('testHashtags.txt') as tests:
 with open('./word_list.txt') as f:
     data = f.read()
     word_list = data.lower().split('\n')
-# with open('/usr/share/dict/words') as file:
-#     linux_dict = file.read().lower().split('\n')
+with open('/usr/share/dict/words') as file:
+    linux_dict = file.read().lower().split('\n')
 with open('testWithAnswers.txt') as file:
     data = file.read().strip()
     for line in data.split('\n'):
@@ -74,8 +72,8 @@ with open('testWithAnswers.txt') as file:
         correct_answers[tag] = seperated_part
 seperate_hashtags(hashtag_list, NLTKdict, rows, correct_answers)
 seperate_hashtags(hashtag_list, word_list, rows, correct_answers)
-# seperate_hashtags(hashtag_list, linux_dict, rows)
-header = ['hashtag', 'NLTK words', 'WER', 'Lexicon from a company', 'WER']
+seperate_hashtags(hashtag_list, linux_dict, rows, correct_answers)
+header = ['hashtag', 'NLTK words', 'WER', 'Lexicon from a company', 'WER', 'Linux Dictionary', 'WER']
 table = []
 for key, values in rows.items():
     new_row = [key]
@@ -84,3 +82,4 @@ for key, values in rows.items():
     table.append(new_row)
 table = [header] + table
 print(tabulate(table, headers = 'firstrow'))
+
