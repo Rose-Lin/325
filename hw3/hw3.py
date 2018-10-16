@@ -24,13 +24,17 @@ def maxmatch(tag, wordlist):
             start += 1
     return words
 
-hashtag_list = ['#computerscience', '#bigbangtheroy', '#thethe', '#breakingbad', 'governmentshutdown', 'gameofthrones']
+hashtag_list = ['#computerscience', '#bigbangtheroy', '#thethe', '#breakingbad', '#governmentshutdown', '#gameofthrones']
 NLTKdict = nltk.corpus.words.words()
 word_list = []
 with open('./word_list.txt') as f:
     data = f.read()
     word_list = data.split('\n')
+with open('/usr/share/dict/words') as file:
+    linux_dict = file.read().split('\n')
 print('---------------Using NLTK words--------')
 seperate_hashtags(hashtag_list, NLTKdict)
 print('---------------Using lexicon from a company--------')
 seperate_hashtags(hashtag_list, word_list)
+print('---------------Using Linux Dict----------')
+seperate_hashtags(hashtag_list, linux_dict)
