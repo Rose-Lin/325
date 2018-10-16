@@ -6,7 +6,7 @@ def seperate_hashtags(hashtag_list, word_list):
         result = maxmatch(tag, word_list)
         for token in result:
             s += token + ' '
-        print ('{} -> {}'.format(tag, s))
+        print ('#{} -> {}'.format(tag, s))
 
 def maxmatch(tag, wordlist):
     start = 0
@@ -24,14 +24,15 @@ def maxmatch(tag, wordlist):
             start += 1
     return words
 
-hashtag_list = ['#computerscience', '#bigbangtheroy', '#thethe', '#breakingbad', '#governmentshutdown', '#gameofthrones']
+with open('testHashtags.txt') as tests:
+    hashtag_list = tests.read().strip().split('\n')
 NLTKdict = nltk.corpus.words.words()
 word_list = []
 with open('./word_list.txt') as f:
     data = f.read()
-    word_list = data.split('\n')
+    word_list = data.lower().split('\n')
 with open('/usr/share/dict/words') as file:
-    linux_dict = file.read().split('\n')
+    linux_dict = file.read().lower().split('\n')
 print('---------------Using NLTK words--------')
 seperate_hashtags(hashtag_list, NLTKdict)
 print('---------------Using lexicon from a company--------')
