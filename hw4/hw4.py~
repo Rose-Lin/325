@@ -1,0 +1,44 @@
+import nltk
+from nltk.corpus import brown
+from nltk.tag import hmm
+
+# What are the 8 most frequent tags?
+brown_news_tagged = brown.tagged_words(categories='news', tagset='universal')
+tag_fd = nltk.FreqDist(tag for (word, tag) in brown_news_tagged)
+most_common = tag_fd.most_common()[:8]
+
+def find_most_frequent(freqdist, tagname, count):
+    result = []
+    for word, tag in brown_news_tagged:
+        if tag == tagname:
+            if word+"/"+tag in ntable.keys():
+                freqdist[word+"/"+tag] += 1
+            else:
+                freqdist[word+"/"+tag] = 1
+    for (word_tag, num) in freqdist.most_common()[:count]:
+        result.append((num, word_tag))
+    return result
+
+# print(brown_news_tagged[0:20])
+# What are the 15 most frequent nouns?
+# What are the 15 most frequent verbs?
+# What are the 15 most frequent adjectives?
+# What are the 15 most frequent adverbs?
+ntable = nltk.FreqDist()
+vtable = nltk.FreqDist()
+adjtable = nltk.FreqDist()
+advtable = nltk.FreqDist()
+
+freq_noun = find_most_frequent(ntable, 'NOUN', 15)
+freq_verb = find_most_frequent(vtable, 'VERB', 15)
+freq_adj = find_most_frequent(adjtable, 'ADJ', 15)
+freq_adv = find_most_frequent(advtable, 'ADV', 15)
+print("15 most frequent nouns: ".format(freq_noun))
+#print(freq_verb)
+#print(freq_adj)
+#print(freq_adv)
+
+def tagging_system(text):
+    hmmTagr = hmm.HiddenMarkovModelTagger.train(brown_news_tagged)
+    tsent = nltk.word_tokenize(text)
+    tagged_sent = hmmTagr.tag(tsent)
