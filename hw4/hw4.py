@@ -57,10 +57,20 @@ def tagging_system(text, name):
     uTagr = nltk.UnigramTagger(bts)
     tsent = nltk.word_tokenize(text)
     tagged_sent = [uTagr.tag(tsent)]
+    hmm_tagged_sent = hmmTagr.tag(tsent)
+    # Comparing with hmm tagger, and set all None tag to th
+    for i in range(len(tagged_sent[0])):
+        if tagged_sent[0][i][1] == None:
+            tagged_sent[0][i] = hmm_tagged_sent[i]
     # print out the accuracy and the tagged text
     if name == 'my_test.txt' or name == 'my_test1.txt':
+        print ("-------Below is the accuracy analysis of my tagging system on text : {} ------".format(name))
         print("the accuracy of {} is :{}".format(name,hmmTagr.evaluate(tagged_sent)))
-    print("------Below is the outcome of UnigramTagging of text: {}------".format(name))
+        print ("some mistaken tags and what it should be based on golden standard: ")
+        for i in range(len(tagged_sent[0])):
+            if not tagged_sent[0][i][1] == hmm_tagged_sent[i][1]:
+                print ("{} should be {}".format(tagged_sent[0][i], hmm_tagged_sent[i]))
+    print("------Below is the outcome of my tagging system on text: {}------".format(name))
     print(tagged_sent[0])
 
 with open("./text1.txt") as f:
@@ -110,7 +120,7 @@ patterns = [
 reTagr = nltk.RegexpTagger(patterns)
 test_sent = brown.sents(categories='news')[0]
 tsent = nltk.word_tokenize(data1)
-print('---------Extra credit--------')
+print('\n+++++++++++++Extra credit++++++++++++++')
 tag_sent = reTagr.tag(tsent)
 print("------Below is the outcome of regular expression tagger of text: {}------".format('text1.txt'))
 print(tag_sent)
