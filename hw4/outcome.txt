@@ -1,0 +1,89 @@
+[rlin1@hadar hw4]$ python3 hw4.py
+/usr/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+8 most frequent tags are: [('NOUN', 30654), ('VERB', 14399), ('ADP', 12355), ('.', 11928), ('DET', 11389), ('ADJ', 6706), ('ADV', 3349), ('CONJ', 2717)]
+15 most frequent nouns:
+Mrs./NOUN appears 253 times
+Mr./NOUN appears 170 times
+year/NOUN appears 138 times
+home/NOUN appears 127 times
+years/NOUN appears 102 times
+time/NOUN appears 97 times
+President/NOUN appears 89 times
+state/NOUN appears 88 times
+week/NOUN appears 86 times
+man/NOUN appears 72 times
+House/NOUN appears 71 times
+members/NOUN appears 69 times
+Kennedy/NOUN appears 66 times
+program/NOUN appears 65 times
+John/NOUN appears 65 times
+----------------------------------
+15 most frequent verbs: 
+is/VERB appears 732 times
+was/VERB appears 717 times
+be/VERB appears 526 times
+said/VERB appears 402 times
+will/VERB appears 388 times
+are/VERB appears 328 times
+has/VERB appears 300 times
+had/VERB appears 279 times
+have/VERB appears 265 times
+were/VERB appears 252 times
+would/VERB appears 244 times
+been/VERB appears 212 times
+made/VERB appears 107 times
+can/VERB appears 93 times
+could/VERB appears 86 times
+----------------------------------
+15 most frequent adj: 
+last/ADJ appears 155 times
+other/ADJ appears 149 times
+new/ADJ appears 148 times
+first/ADJ appears 128 times
+more/ADJ appears 122 times
+New/ADJ appears 93 times
+American/ADJ appears 65 times
+many/ADJ appears 60 times
+only/ADJ appears 55 times
+such/ADJ appears 51 times
+good/ADJ appears 46 times
+high/ADJ appears 44 times
+special/ADJ appears 41 times
+National/ADJ appears 40 times
+own/ADJ appears 39 times
+----------------------------------
+15 most frequent adv: 
+not/ADV appears 254 times
+when/ADV appears 128 times
+also/ADV appears 120 times
+now/ADV appears 76 times
+as/ADV appears 75 times
+here/ADV appears 67 times
+where/ADV appears 58 times
+then/ADV appears 56 times
+back/ADV appears 55 times
+about/ADV appears 49 times
+more/ADV appears 49 times
+only/ADV appears 48 times
+even/ADV appears 48 times
+so/ADV appears 47 times
+most/ADV appears 45 times
+----------------------------------
+the accuracy of text1.txt is :0.8082191780821918
+------Below is the outcome of UnigramTagging of text: text1.txt------
+[('Computer', None), ('Science', 'NOUN'), ('is', 'VERB'), ('the', 'DET'), ('science', 'NOUN'), ('of', 'ADP'), ('algorithms', None), (':', '.'), ('their', 'DET'), ('theory', 'NOUN'), (',', '.'), ('analysis', 'NOUN'), (',', '.'), ('design', 'NOUN'), ('and', 'CONJ'), ('implementation', 'NOUN'), ('.', '.'), ('As', 'ADP'), ('such', 'ADJ'), ('it', 'PRON'), ('is', 'VERB'), ('an', 'DET'), ('interdisciplinary', None), ('field', 'NOUN'), ('with', 'ADP'), ('roots', None), ('in', 'ADP'), ('mathematics', 'NOUN'), ('and', 'CONJ'), ('engineering', 'NOUN'), ('and', 'CONJ'), ('applications', 'NOUN'), ('in', 'ADP'), ('many', 'ADJ'), ('other', 'ADJ'), ('academic', 'ADJ'), ('disciplines', None), ('.', '.'), ('The', 'DET'), ('program', 'NOUN'), ('at', 'ADP'), ('Bryn', None), ('Mawr', None), ('is', 'VERB'), ('founded', 'VERB'), ('on', 'ADP'), ('the', 'DET'), ('belief', 'NOUN'), ('that', 'ADP'), ('computer', None), ('science', 'NOUN'), ('should', 'VERB'), ('transcend', None), ('from', 'ADP'), ('being', 'VERB'), ('a', 'DET'), ('subfield', None), ('of', 'ADP'), ('mathematics', 'NOUN'), ('and', 'CONJ'), ('engineering', 'NOUN'), ('and', 'CONJ'), ('play', 'VERB'), ('a', 'DET'), ('broader', None), ('role', 'NOUN'), ('in', 'ADP'), ('all', 'PRT'), ('forms', 'NOUN'), ('of', 'ADP'), ('human', 'NOUN'), ('inquiry', None), ('.', '.')]
+the accuracy of text2.txt is :0.6900584795321637
+------Below is the outcome of UnigramTagging of text: text2.txt------
+[('A', 'DET'), ('fish', None), ('is', 'VERB'), ('an', 'DET'), ('animal', 'NOUN'), ('.', '.'), ('A', 'DET'), ('bird', 'NOUN'), ('is', 'VERB'), ('an', 'DET'), ('animal', 'NOUN'), ('.', '.'), ('A', 'DET'), ('fish', None), ('has', 'VERB'), ('gills', None), ('.', '.'), ('A', 'DET'), ('fish', None), ('swims', None), ('.', '.'), ('A', 'DET'), ('bird', 'NOUN'), ('flies', 'VERB'), ('.', '.'), ('Mammals', None), ('are', 'VERB'), ('animals', 'NOUN'), ('.', '.'), ('Humans', None), ('are', 'VERB'), ('mammals', None), ('.', '.'), ('Socrates', None), ('is', 'VERB'), ('human', 'NOUN'), ('.', '.'), ('Deepak', None), ('is', 'VERB'), ('human', 'NOUN'), ('.', '.'), ('Dogs', None), ('are', 'VERB'), ('mammals', None), ('.', '.'), ('Collies', None), ('are', 'VERB'), ('dogs', 'NOUN'), ('.', '.'), ('Rover', None), ('is', 'VERB'), ('a', 'DET'), ('collie', None), ('.', '.'), ('Beagles', None), ('are', 'VERB'), ('dogs', 'NOUN'), ('.', '.'), ('Snoopy', None), ('is', 'VERB'), ('a', 'DET'), ('beagle', None), ('.', '.'), ('Birds', 'NOUN'), ('are', 'VERB'), ('animals', 'NOUN'), ('.', '.'), ('Canaries', None), ('are', 'VERB'), ('birds', 'NOUN'), ('.', '.'), ('Tweety', None), ('is', 'VERB'), ('a', 'DET'), ('canary', None), ('.', '.'), ('Parrots', None), ('are', 'VERB'), ('birds', 'NOUN'), ('.', '.'), ('Polly', None), ('is', 'VERB'), ('a', 'DET'), ('parrot', None), ('.', '.'), ('Dogs', None), ('have', 'VERB'), ('canines', None), ('.', '.'), ('Mammals', None), ('have', 'VERB'), ('hair', 'NOUN'), ('.', '.'), ('Dogs', None), ('bite', 'VERB'), ('.', '.'), ('Birds', 'NOUN'), ('fly', 'NOUN'), ('.', '.'), ('Birds', 'NOUN'), ('have', 'VERB'), ('feathers', 'NOUN'), ('.', '.'), ('Humans', None), ('are', 'VERB'), ('biped', None), ('.', '.'), ('Humans', None), ('walk', 'VERB'), ('.', '.'), ('Who', None), ('are', 'VERB'), ('all', 'PRT'), ('the', 'DET'), ('animals', 'NOUN'), ('?', '.'), ('Who', None), ('are', 'VERB'), ('all', 'PRT'), ('the', 'DET'), ('mammals', None), ('?', '.'), ('Who', None), ('are', 'VERB'), ('all', 'PRT'), ('the', 'DET'), ('birds', 'NOUN'), ('?', '.'), ('Who', None), ('bites', 'NOUN'), ('?', '.'), ('What', 'DET'), ('bites', 'NOUN'), ('?', '.'), ('Does', None), ('Rover', None), ('bite', 'VERB'), ('?', '.'), ('Does', None), ('Socrates', None), ('bite', 'VERB'), ('?', '.'), ('Who', None), ('walks', 'VERB'), ('?', '.'), ('Who', None), ('has', 'VERB'), ('hair', 'NOUN'), ('?', '.'), ('Does', None), ('Polly', None), ('have', 'VERB'), ('hair', 'NOUN'), ('?', '.'), ('Does', None), ('Snoopy', None), ('have', 'VERB'), ('hair', 'NOUN'), ('?', '.'), ('Who', None), ('is', 'VERB'), ('what', 'DET'), ('?', '.'), ('Who', None), ('does', 'VERB'), ('what', 'DET'), ('?', '.'), ('Who', None), ('has', 'VERB'), ('what', 'DET'), ('?', '.')]
+the accuracy of my_test.txt is :0.8991596638655462
+------Below is the outcome of UnigramTagging of text: my_test.txt------
+[('When', 'ADV'), ('I', 'PRON'), ('was', 'VERB'), ('19', 'NUM'), ('years', 'NOUN'), ('old', 'ADJ'), (',', '.'), ('after', 'ADP'), ('five', 'NUM'), ('years', 'NOUN'), ('of', 'ADP'), ('back-and-forth', None), ('trips', 'NOUN'), ('that', 'ADP'), ('grew', 'VERB'), ('longer', 'ADV'), ('each', 'DET'), ('time', 'NOUN'), (',', '.'), ('I', 'PRON'), ('finally', 'ADV'), ('relocated', None), ('officially', 'ADV'), ('from', 'ADP'), ('the', 'DET'), ('United', 'VERB'), ('States', 'NOUN'), ('to', 'PRT'), ('France', 'NOUN'), ('.', '.'), ('Already', 'ADV'), ('armed', 'VERB'), ('with', 'ADP'), ('a', 'DET'), ('fairly', 'ADV'), ('good', 'ADJ'), ('grasp', 'NOUN'), ('of', 'ADP'), ('the', 'DET'), ('language', 'NOUN'), (',', '.'), ('I', 'PRON'), ('was', 'VERB'), ('convinced', 'VERB'), ('that', 'ADP'), ('I', 'PRON'), ('would', 'VERB'), ('soon', 'ADV'), ('assimilate', None), ('into', 'ADP'), ('French', 'ADJ'), ('culture', 'NOUN'), ('.', '.'), ('Of', 'ADP'), ('course', 'NOUN'), (',', '.'), ('I', 'PRON'), ('was', 'VERB'), ('wrong', 'ADJ'), ('.', '.'), ('There', 'PRT'), ('’', None), ('s', None), ('nothing', 'NOUN'), ('like', 'ADP'), ('cultural', 'ADJ'), ('nuance', None), ('to', 'PRT'), ('remind', None), ('you', 'PRON'), ('who', 'PRON'), ('you', 'PRON'), ('are', 'VERB'), ('at', 'ADP'), ('your', 'DET'), ('core', 'NOUN'), (':', '.'), ('my', 'DET'), ('Americanness', None), ('became', 'VERB'), ('all', 'PRT'), ('the', 'DET'), ('more', 'ADJ'), ('perceptible', None), ('the', 'DET'), ('longer', 'ADV'), ('I', 'PRON'), ('remained', 'VERB'), ('in', 'ADP'), ('France', 'NOUN'), (',', '.'), ('and', 'CONJ'), ('perhaps', 'ADV'), ('no', 'DET'), ('more', 'ADJ'), ('so', 'ADV'), ('than', 'ADP'), ('the', 'DET'), ('day', 'NOUN'), ('a', 'DET'), ('French', 'ADJ'), ('teacher', 'NOUN'), ('told', 'VERB'), ('me', 'PRON'), ('his', 'DET'), ('theory', 'NOUN'), ('on', 'ADP'), ('the', 'DET'), ('key', 'NOUN'), ('distinction', 'NOUN'), ('between', 'ADP'), ('those', 'DET'), ('from', 'ADP'), ('my', 'DET'), ('native', 'NOUN'), ('and', 'CONJ'), ('adopted', 'VERB'), ('lands', None), ('.', '.')]
+the accuracy of my_test1.txt is :0.875
+------Below is the outcome of UnigramTagging of text: my_test1.txt------
+[('Last', 'ADJ'), ('Earth', None), ('Day', 'NOUN'), (',', '.'), ('I', 'PRON'), ('published', 'VERB'), ('a', 'DET'), ('column', 'NOUN'), ('in', 'ADP'), ('the', 'DET'), ('Washington', 'NOUN'), ('Post', 'NOUN'), ('on', 'ADP'), ('common', 'ADJ'), ('recycling', None), ('myths', None), ('.', '.'), ('I', 'PRON'), ('received', 'VERB'), ('so', 'ADV'), ('many', 'ADJ'), ('comments', 'NOUN'), ('and', 'CONJ'), ('emails', None), ('in', 'ADP'), ('response', 'NOUN'), (',', '.'), ('often', 'ADV'), ('asking', 'VERB'), ('additional', 'ADJ'), ('questions', 'NOUN'), (',', '.'), ('that', 'ADP'), ('I', 'PRON'), ('wanted', 'VERB'), ('to', 'PRT'), ('follow', 'VERB'), ('up', 'PRT'), ('with', 'ADP'), ('a', 'DET'), ('new', 'ADJ'), ('list', 'NOUN'), ('here', 'ADV'), ('at', 'ADP'), ('National', 'ADJ'), ('Geographic', None), ('.', '.'), ('The', 'DET'), ('recycling', None), ('industry', 'NOUN'), ('is', 'VERB'), ('changing', 'VERB'), ('rapidly', 'ADV'), (',', '.'), ('as', 'ADP'), ('are', 'VERB'), ('advancements', None), ('in', 'ADP'), ('materials', 'NOUN'), ('science', 'NOUN'), ('and', 'CONJ'), ('product', 'NOUN'), ('design', 'NOUN'), ('.', '.'), ('The', 'DET'), ('field', 'NOUN'), ('has', 'VERB'), ('an', 'DET'), ('increasingly', 'ADV'), ('global', 'ADJ'), ('footprint', None), ('and', 'CONJ'), ('is', 'VERB'), ('affected', 'VERB'), ('by', 'ADP'), ('complex', 'ADJ'), ('forces', 'NOUN'), (',', '.'), ('from', 'ADP'), ('oil', 'NOUN'), ('prices', 'NOUN'), ('to', 'PRT'), ('national', 'ADJ'), ('policies', 'NOUN'), ('and', 'CONJ'), ('consumer', 'NOUN'), ('preferences', None), ('.', '.')]
+---------Extra credit--------
+------Below is the outcome of regular expression tagger of text: text1.txt------
+[('Computer', 'NOUN'), ('Science', 'NOUN'), ('is', 'VERB'), ('the', 'DET'), ('science', 'NOUN'), ('of', 'ADP'), ('algorithms', 'NOUN'), (':', '.'), ('their', 'PRON'), ('theory', 'NOUN'), (',', '.'), ('analysis', 'NOUN'), (',', '.'), ('design', 'NOUN'), ('and', 'CONJ'), ('implementation', 'NOUN'), ('.', '.'), ('As', 'NOUN'), ('such', 'ADV'), ('it', 'PRON'), ('is', 'VERB'), ('an', 'DET'), ('interdisciplinary', 'NOUN'), ('field', 'NOUN'), ('with', 'PRT'), ('roots', 'NOUN'), ('in', 'NOUN'), ('mathematics', 'NOUN'), ('and', 'CONJ'), ('engineering', 'NOUN'), ('and', 'CONJ'), ('applications', 'NOUN'), ('in', 'NOUN'), ('many', 'ADV'), ('other', 'NOUN'), ('academic', 'NOUN'), ('disciplines', 'VERB'), ('.', '.'), ('The', 'DET'), ('program', 'NOUN'), ('at', 'PRT'), ('Bryn', 'NOUN'), ('Mawr', 'NOUN'), ('is', 'VERB'), ('founded', 'VERB'), ('on', 'PRT'), ('the', 'DET'), ('belief', 'NOUN'), ('that', 'PRT'), ('computer', 'NOUN'), ('science', 'NOUN'), ('should', 'VERB'), ('transcend', 'VERB'), ('from', 'ADP'), ('being', 'VERB'), ('a', 'DET'), ('subfield', 'NOUN'), ('of', 'ADP'), ('mathematics', 'NOUN'), ('and', 'CONJ'), ('engineering', 'NOUN'), ('and', 'CONJ'), ('play', 'VERB'), ('a', 'DET'), ('broader', 'NOUN'), ('role', 'NOUN'), ('in', 'NOUN'), ('all', 'NOUN'), ('forms', 'NOUN'), ('of', 'ADP'), ('human', 'NOUN'), ('inquiry', 'NOUN'), ('.', '.')]
+------Below is the outcome of regular expression tagger of text: text2.txt------
+[('A', 'DET'), ('fish', 'NOUN'), ('is', 'VERB'), ('an', 'DET'), ('animal', 'NOUN'), ('.', '.'), ('A', 'DET'), ('bird', 'NOUN'), ('is', 'VERB'), ('an', 'DET'), ('animal', 'NOUN'), ('.', '.'), ('A', 'DET'), ('fish', 'NOUN'), ('has', 'VERB'), ('gills', 'NOUN'), ('.', '.'), ('A', 'DET'), ('fish', 'NOUN'), ('swims', 'VERB'), ('.', '.'), ('A', 'DET'), ('bird', 'NOUN'), ('flies', 'VERB'), ('.', '.'), ('Mammals', 'NOUN'), ('are', 'VERB'), ('animals', 'NOUN'), ('.', '.'), ('Humans', 'NOUN'), ('are', 'VERB'), ('mammals', 'NOUN'), ('.', '.'), ('Socrates', 'NOUN'), ('is', 'VERB'), ('human', 'NOUN'), ('.', '.'), ('Deepak', 'NOUN'), ('is', 'VERB'), ('human', 'NOUN'), ('.', '.'), ('Dogs', 'NOUN'), ('are', 'VERB'), ('mammals', 'NOUN'), ('.', '.'), ('Collies', 'NOUN'), ('are', 'VERB'), ('dogs', 'NOUN'), ('.', '.'), ('Rover', 'NOUN'), ('is', 'VERB'), ('a', 'DET'), ('collie', 'NOUN'), ('.', '.'), ('Beagles', 'NOUN'), ('are', 'VERB'), ('dogs', 'NOUN'), ('.', '.'), ('Snoopy', 'NOUN'), ('is', 'VERB'), ('a', 'DET'), ('beagle', 'NOUN'), ('.', '.'), ('Birds', 'NOUN'), ('are', 'VERB'), ('animals', 'NOUN'), ('.', '.'), ('Canaries', 'NOUN'), ('are', 'VERB'), ('birds', 'NOUN'), ('.', '.'), ('Tweety', 'NOUN'), ('is', 'VERB'), ('a', 'DET'), ('canary', 'NOUN'), ('.', '.'), ('Parrots', 'NOUN'), ('are', 'VERB'), ('birds', 'NOUN'), ('.', '.'), ('Polly', 'NOUN'), ('is', 'VERB'), ('a', 'DET'), ('parrot', 'NOUN'), ('.', '.'), ('Dogs', 'NOUN'), ('have', 'VERB'), ('canines', 'VERB'), ('.', '.'), ('Mammals', 'NOUN'), ('have', 'VERB'), ('hair', 'NOUN'), ('.', '.'), ('Dogs', 'NOUN'), ('bite', 'VERB'), ('.', '.'), ('Birds', 'NOUN'), ('fly', 'VERB'), ('.', '.'), ('Birds', 'NOUN'), ('have', 'VERB'), ('feathers', 'NOUN'), ('.', '.'), ('Humans', 'NOUN'), ('are', 'VERB'), ('biped', 'ADJ'), ('.', '.'), ('Humans', 'NOUN'), ('walk', 'VERB'), ('.', '.'), ('Who', 'DET'), ('are', 'VERB'), ('all', 'NOUN'), ('the', 'DET'), ('animals', 'NOUN'), ('?', '.'), ('Who', 'DET'), ('are', 'VERB'), ('all', 'NOUN'), ('the', 'DET'), ('mammals', 'NOUN'), ('?', '.'), ('Who', 'DET'), ('are', 'VERB'), ('all', 'NOUN'), ('the', 'DET'), ('birds', 'NOUN'), ('?', '.'), ('Who', 'DET'), ('bites', 'VERB'), ('?', '.'), ('What', 'NOUN'), ('bites', 'VERB'), ('?', '.'), ('Does', 'VERB'), ('Rover', 'NOUN'), ('bite', 'VERB'), ('?', '.'), ('Does', 'VERB'), ('Socrates', 'NOUN'), ('bite', 'VERB'), ('?', '.'), ('Who', 'DET'), ('walks', 'VERB'), ('?', '.'), ('Who', 'DET'), ('has', 'VERB'), ('hair', 'NOUN'), ('?', '.'), ('Does', 'VERB'), ('Polly', 'NOUN'), ('have', 'VERB'), ('hair', 'NOUN'), ('?', '.'), ('Does', 'VERB'), ('Snoopy', 'NOUN'), ('have', 'VERB'), ('hair', 'NOUN'), ('?', '.'), ('Who', 'DET'), ('is', 'VERB'), ('what', 'NOUN'), ('?', '.'), ('Who', 'DET'), ('does', 'VERB'), ('what', 'NOUN'), ('?', '.'), ('Who', 'DET'), ('has', 'VERB'), ('what', 'NOUN'), ('?', '.')]
