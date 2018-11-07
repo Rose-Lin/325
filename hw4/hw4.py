@@ -58,7 +58,8 @@ def tagging_system(text, name):
     tsent = nltk.word_tokenize(text)
     tagged_sent = [uTagr.tag(tsent)]
     # print out the accuracy and the tagged text
-    print("the accuracy of {} is :{}".format(name,hmmTagr.evaluate(tagged_sent)))
+    if name == 'my_test.txt' or name == 'my_test1.txt':
+        print("the accuracy of {} is :{}".format(name,hmmTagr.evaluate(tagged_sent)))
     print("------Below is the outcome of UnigramTagging of text: {}------".format(name))
     print(tagged_sent[0])
 
