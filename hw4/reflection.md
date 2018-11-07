@@ -11,4 +11,7 @@ Rose Lin
   * Tag all four texts with Unigram Tagger.
   
   * Use the hmm Tagger to evaluate the outcome of Unigram Tagger.
-  
+
+* Unigram tagging will produce `None` tag for some nouns like computer. This is the main source of the inaccuracy.
+ 
+* For the regular expression tagger, some special cases are taken into consideration for the two provided test text. For example, `bite` is tagged as `VERB`, `Polly` is tagged as `NOUN` instead of `ADJ`, which is implied by the more general rules.
