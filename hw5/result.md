@@ -1,3 +1,7 @@
+Rose Lin
+
+Assignment 5
+
 Below are the output of all the sentences in blue after parsing.
 
 1. (S (NP (Det A) (N fish)) (VP (V is) (NP (Det an) (N animal))))
