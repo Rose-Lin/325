@@ -1,15 +1,15 @@
 Below are the output of all the sentences in blue after parsing.
 
-(S (NP (Det A) (N fish)) (VP (V is) (NP (Det an) (N animal))))
-(S (NP (Det A) (N bird)) (VP (V is) (NP (Det an) (N animal))))
-(S (NP (Det A) (N fish)) (VP (V has) (NP (N gills))))
-(S (NP (Det A) (N fish)) (VP (V swims)))
-(S (NP (Det A) (N bird)) (VP (V flies)))
-(S (NP (PRON What)) (VP (V is) (NP (N fish))))
-(S (VP (V Is)) (NP (Det a) (N fish)) (NP (Det an) (N animal)))
-(S (Aux Does) (NP (Det a) (N fish)) (VP (V swim)))
-(S (Aux Does) (NP (Det a) (N bird)) (VP (V have) (NP (N gills))))
-(S (Aux Does) (NP (Det a) (N bird)) (VP (V fly)))
+1. (S (NP (Det A) (N fish)) (VP (V is) (NP (Det an) (N animal))))
+2. (S (NP (Det A) (N bird)) (VP (V is) (NP (Det an) (N animal))))
+3. (S (NP (Det A) (N fish)) (VP (V has) (NP (N gills))))
+4. (S (NP (Det A) (N fish)) (VP (V swims)))
+5. (S (NP (Det A) (N bird)) (VP (V flies)))
+6. (S (NP (PRON What)) (VP (V is) (NP (N fish))))
+7. (S (VP (V Is)) (NP (Det a) (N fish)) (NP (Det an) (N animal)))
+8. (S (Aux Does) (NP (Det a) (N fish)) (VP (V swim)))
+9. (S (Aux Does) (NP (Det a) (N bird)) (VP (V have) (NP (N gills))))
+10. (S (Aux Does) (NP (Det a) (N bird)) (VP (V fly)))
 
 Below are three additional sentences accepted by my program.
 
