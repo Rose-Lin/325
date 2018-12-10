@@ -1,0 +1,45 @@
+import nltk
+from nltk.corpus import brown
+
+def CFG(sentences):
+    # nltk.app.srparser()
+    brown_tagged = brown.tagged_words( tagset='universal')
+    print(brown_tagged[0:10])
+    grammar1 = nltk.CFG.fromstring(
+    """
+    S -> NP VP| VP
+    NP -> N | Det N | Det N PP | "I" | PRON
+    VP -> V | V NP | V NP PP
+    PP -> P NP
+    V -> "saw" | "ate" |"is"|"has"|"swims"|"flies"|"are"|"have"|"bite"|"fly"|"walks"|"walk"|"bites"|"does"|"Does"
+    Det -> "a" | "the" | "an" |"A"|"What"|"what"
+    N -> "man" | "dog" |"telescope" | "park" | "fish" | "animal"|"bird"|"gills"|"animals"|"Mammals"|"mammals"|"Humans"|"human"|"Socrates"|"Deepak"|"Dogs"|"dogs"|"Collies"|"collie"|"Rover"|"Beagles"|"beagle"|"Snoopy"|"Birds"|"Canaries"|"Tweety"|"canary" |"Parrots"|"Polly"|"parrot"|"hair"|"birds"|"canines"|"feathers"|"bites"
+    P -> "in" | "under" | "with"
+    ADJ -> "biped"
+    PRON -> "Who"
+    ADV -> "all"
+    PRT -> "all"
+    """)
+#    for pair in brown_tagged:
+#        if pair[0] == 'bites' or pair[0] == 'all':
+#            print (pair)
+    for sentence in sentences:
+        sent = nltk.word_tokenize(sentence[:-1])
+#        print(sent)
+        for word in sent:
+            found = False
+#            for pair in brown_tagged:
+#                if pair[0] == word:
+#                    print(pair)
+#                    found = True
+#                    break
+            # if not found:
+                # print ((word, 'None'))
+        parser = nltk.RecursiveDescentParser(grammar1)
+        for p in parser.parse_all(sent):
+            print(p)
+
+with open('sen.txt') as file:
+    sentences = file.read().strip().split('\n')
+
+CFG(sentences)

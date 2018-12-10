@@ -1,0 +1,21 @@
+Below are the output of all the sentences in blue after parsing.
+
+(S (NP (Det A) (N fish)) (VP (V is) (NP (Det an) (N animal))))
+(S (NP (Det A) (N bird)) (VP (V is) (NP (Det an) (N animal))))
+(S (NP (Det A) (N fish)) (VP (V has) (NP (N gills))))
+(S (NP (Det A) (N fish)) (VP (V swims)))
+(S (NP (Det A) (N bird)) (VP (V flies)))
+(S (NP (PRON What)) (VP (V is) (NP (N fish))))
+(S (VP (V Is)) (NP (Det a) (N fish)) (NP (Det an) (N animal)))
+(S (Aux Does) (NP (Det a) (N fish)) (VP (V swim)))
+(S (Aux Does) (NP (Det a) (N bird)) (VP (V have) (NP (N gills))))
+(S (Aux Does) (NP (Det a) (N bird)) (VP (V fly)))
+
+Below are three additional sentences.
+
+* Dogs swim.
+(S (NP (N Dogs)) (VP (V swim)))
+* This dog swims.
+(S (NP (Det This) (N dog)) (VP (V swims)))
+* Who swims?
+(S (NP (PRON Who)) (VP (V swims)))
